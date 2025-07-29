@@ -2,7 +2,7 @@
 
 ## 📋 Penjelasan Singkat
 
-RAG SimpliDOTS adalah solusi intelligent knowledge management system yang menggabungkan web scraping, vector storage, dan conversational AI untuk mengotomatisasi proses ekstraksi, pemrosesan, dan penyajian informasi dari artikel web. Sistem ini dirancang khusus untuk memproses konten dari SimpliDOTS dan menyediakan interface chat yang memungkinkan pengguna berinteraksi dengan knowledge base secara natural.
+RAG SimpliDOTS adalah solusi intelligent knowledge management system yang menggabungkan web scraping, vector storage, dan conversational AI untuk mengotomatisasi proses ekstraksi, pemrosesan, dan penyajian informasi dari artikel web dengan memanfaatkan tool **n8n**. Sistem ini dirancang khusus untuk memproses konten dari SimpliDOTS dan menyediakan interface chat yang memungkinkan pengguna berinteraksi dengan knowledge base secara natural.
 
 Sistem ini menggunakan teknologi RAG (Retrieval-Augmented Generation) yang memungkinkan AI untuk memberikan jawaban yang akurat berdasarkan data yang telah diindeks, bukan hanya mengandalkan pengetahuan pre-training model.
 
@@ -75,6 +75,7 @@ docker run -it --rm --name n8n \
   -p 5678:5678 \
   -v n8n_data:/home/node/.n8n \
   --dns 8.8.8.8 \
+  -e TZ=Asia/Jakarta \
   docker.n8n.io/n8nio/n8n
 ```
 
@@ -173,24 +174,10 @@ Jika menggunakan Notion integration:
 3. Sistem akan mencari informasi relevan dan memberikan jawaban contextual
 
 
-## 📁 Struktur Workflow
+## **Catatan Untuk Reviewer**
 
-```
-├── Scraping Section
-│   ├── Manual Trigger
-│   ├── Extract Data (Firecrawl)
-│   ├── Wait & Retry Logic
-│   └── Get Extract Status
-│
-├── Processing Section
-│   ├── Content Cleaning (AI Agent)
-│   ├── Summarization Chain
-│   └── Notion Documentation
-│
-└── RAG Section
-    ├── Vector Store (In-Memory)
-    ├── Azure OpenAI Embeddings
-    ├── Chat Trigger
-    ├── AI Agent with Tools
-    └── Memory Buffer
-```
+- Saat ini menggunakan manual trigger untuk memudahkan demo. Dalam implementasi yang lebih kompleks, dapat menggunakan scheduler atau event-driven architecture untuk memulai
+- URL Target Limitations  
+  - Workflow saat ini hard-coded untuk URL SimpliDOTS tertentu
+  - Untuk test dengan URL lain, edit node "Extract Data"
+- 
