@@ -89,14 +89,8 @@ docker run -it --rm --name n8n \
 2. Setup admin user pada first run
 3. Login dengan credentials yang telah dibuat
 
-#### 2. Import Workflow ke n8n
+#### 2. Import Workflow ke n8n melalui UI n8n
 
-```bash
-# Jika menggunakan n8n CLI (dalam container)
-docker exec -it n8n n8n import:workflow --file="/data/RAG_SimpliDOTS_Technical_Test.json"
-```
-
-Atau melalui UI n8n:
 1. Buka n8n interface di `http://localhost:5678`
 2. Login dengan credentials admin
 3. Klik "Import from file"
@@ -107,26 +101,30 @@ Atau melalui UI n8n:
 Dalam n8n, setup credentials berikut:
 
 **Azure OpenAI Credentials:**
+buat akun dan buat projek [disini](https://ai.azure.com/)
 ```
-Name: Azure Open AI account 2
+Resource Name: Your Azure AI Foundry resource name
 Endpoint: YOUR_AZURE_OPENAI_ENDPOINT
 API Key: YOUR_AZURE_OPENAI_KEY
 API Version: 2023-05-15
 ```
 
-**DeepSeek Credentials:**
+**DeepSeek Credentials:**  
+buat akun dan copy API [disini](https://platform.deepseek.com/usage)
 ```
 Name: DeepSeek account
 API Key: YOUR_DEEPSEEK_API_KEY
 ```
 
-**Firecrawl Credentials:**
+**Firecrawl Credentials:**  
+buat akun dan copy API [disini](https://www.firecrawl.dev/app/api-keys)
 ```
 Name: Firecrawl account
 API Key: YOUR_FIRECRAWL_API_KEY
 ```
 
-**Notion Credentials (opsional):**
+**Notion Credentials:**  
+lihat dokumentasi [disini](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion)
 ```
 Name: Notion account
 Token: YOUR_NOTION_TOKEN
