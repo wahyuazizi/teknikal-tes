@@ -181,3 +181,6 @@ Jika menggunakan Notion integration:
   - Workflow saat ini hard-coded untuk URL SimpliDOTS tertentu
   - Untuk test dengan URL lain, edit node "Extract Data"
 - Pastikan untuk memasukan Credential yang diperlukan dalam node pada workflow. Tertera juga pada catatan dalam workflow
+
+## **Demo**
+<iframe width="560" height="315" src="https://youtu.be/4Y55WZg-bNo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
