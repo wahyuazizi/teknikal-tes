@@ -184,4 +184,5 @@ Jika menggunakan Notion integration:
 
 ## **Demo**
 
-<iframe width="560" height="315" src="https://youtu.be/4Y55WZg-bNo" frameborder="0" allowfullscreen></iframe>
+[![Tonton di YouTube](https://img.youtube.com/vi/4Y55WZg-bNo/2.jpg)](https://youtu.be/4Y55WZg-bNo)
+
