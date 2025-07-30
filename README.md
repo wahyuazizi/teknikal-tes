@@ -183,4 +183,5 @@ Jika menggunakan Notion integration:
 - Pastikan untuk memasukan Credential yang diperlukan dalam node pada workflow. Tertera juga pada catatan dalam workflow
 
 ## **Demo**
-<iframe width="560" height="315" src="https://youtu.be/4Y55WZg-bNo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://youtu.be/4Y55WZg-bNo" frameborder="0" allowfullscreen></iframe>
