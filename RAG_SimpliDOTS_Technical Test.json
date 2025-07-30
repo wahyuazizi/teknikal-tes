@@ -6,8 +6,8 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -656,
-        -176
+        -1136,
+        -112
       ],
       "id": "522c53c6-c1d7-4218-bd4c-96981771e74a",
       "name": "When clicking ‘Execute workflow’"
@@ -24,8 +24,8 @@
       "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
       "typeVersion": 1.3,
       "position": [
-        768,
-        480
+        1536,
+        272
       ],
       "id": "fd1aa2f3-0d2d-4664-9d83-f8e1e05e2905",
       "name": "Simple Vector Store"
@@ -38,8 +38,8 @@
       "type": "@n8n/n8n-nodes-langchain.embeddingsAzureOpenAi",
       "typeVersion": 1,
       "position": [
-        768,
-        944
+        1536,
+        800
       ],
       "id": "88943764-7fcb-463b-bcdc-d08cbc64cfdb",
       "name": "Embeddings Azure OpenAI",
@@ -57,8 +57,8 @@
       "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
       "typeVersion": 1.1,
       "position": [
-        896,
-        688
+        1696,
+        496
       ],
       "id": "b09db672-4b3a-4d87-96e1-9735408f415e",
       "name": "Default Data Loader"
@@ -71,8 +71,8 @@
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.1,
       "position": [
-        928,
-        272
+        656,
+        400
       ],
       "id": "2ff7e74c-7969-43bb-a5d6-41ce8ddcd43f",
       "name": "When chat message received",
@@ -85,8 +85,8 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.1,
       "position": [
-        1248,
-        272
+        1008,
+        400
       ],
       "id": "b8ed735d-9308-49b9-9368-02637d1d4267",
       "name": "AI Agent"
@@ -96,8 +96,8 @@
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3,
       "position": [
-        1328,
-        496
+        1072,
+        592
       ],
       "id": "9bb6f1b1-bcf4-4bd4-af04-7337e039e9a6",
       "name": "Simple Memory"
@@ -116,8 +116,8 @@
       "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
       "typeVersion": 1.2,
       "position": [
-        1344,
-        688
+        1168,
+        704
       ],
       "id": "0d67290f-1318-407c-a1ef-fac8aacd22ca",
       "name": "Query Data Tool"
@@ -129,7 +129,7 @@
           "value": "https://www.notion.so/Internal-Update-23e521ac0ef280059c14fc0a44ff007e",
           "mode": "url"
         },
-        "title": "=Internal Update {{ $now }}",
+        "title": "=Internal Update {{ new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Jakarta' }) }}\n",
         "simple": false,
         "blockUi": {
           "blockValues": [
@@ -163,8 +163,8 @@
       "type": "n8n-nodes-base.notion",
       "typeVersion": 2.2,
       "position": [
-        1472,
-        -224
+        1408,
+        -320
       ],
       "id": "c3920702-07e1-4445-ae2e-78b915f40cb7",
       "name": "Create a page",
@@ -182,8 +182,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
       "typeVersion": 1,
       "position": [
-        672,
-        -16
+        896,
+        -144
       ],
       "id": "3a2c174b-54f7-4156-8703-5b7a31161ed5",
       "name": "DeepSeek Chat Model",
@@ -193,24 +193,6 @@
           "name": "DeepSeek account"
         }
       }
-    },
-    {
-      "parameters": {
-        "promptType": "define",
-        "text": "=Ambil dan rapikan informasi dari halaman yang diberikan\nGunakan format teks biasa (plain text),\n\nContoh format output yang diinginkan:\n\nIsi artikel lengkap, termasuk paragraf, bullet list, teks setelah gambar, dan format lainnya.\n\n\ndata: {{ $json.data.data.article.main_content }}\n",
-        "hasOutputParser": true,
-        "options": {
-          "systemMessage": "hapus simbol atau karakter yang tidak perlu"
-        }
-      },
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2.1,
-      "position": [
-        672,
-        -320
-      ],
-      "id": "a5b6302e-39f2-4594-8494-4e08173436af",
-      "name": "AI Agent1"
     },
     {
       "parameters": {
@@ -229,8 +211,8 @@
       "type": "@mendable/n8n-nodes-firecrawl.firecrawl",
       "typeVersion": 1,
       "position": [
-        -448,
-        -176
+        -944,
+        -112
       ],
       "id": "aa6e9c72-4390-44bb-8310-f5eb73b78510",
       "name": "Extract Data",
@@ -250,8 +232,8 @@
       "type": "@mendable/n8n-nodes-firecrawl.firecrawl",
       "typeVersion": 1,
       "position": [
-        -16,
-        -176
+        -96,
+        -304
       ],
       "id": "4881458f-ee5d-4493-b589-6aae5cfbbe74",
       "name": "Get Extract Status",
@@ -289,21 +271,22 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        208,
-        -176
+        96,
+        -304
       ],
       "id": "9cc5336d-f4bf-45b5-ae75-0f0be8388d38",
       "name": "If"
     },
     {
       "parameters": {
+        "amount": 1.3,
         "unit": "minutes"
       },
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        -240,
-        -176
+        -304,
+        -304
       ],
       "id": "d88e7d03-7866-47e4-81b5-e44a8cab878d",
       "name": "Wait1",
@@ -311,20 +294,24 @@
     },
     {
       "parameters": {
+        "operationMode": "documentLoader",
         "options": {
           "summarizationMethodAndPrompts": {
             "values": {
-              "combineMapPrompt": "Write a concise summary of the following in Indonesian Language, in inline plain text only (no Markdown symbols such as **bold**, *, -, etc):\n\n\n\"{text}\"\n\n\nCONCISE SUMMARY:",
-              "prompt": "Write a concise summary of the following in Indonesian Language, in inline plain text only (no Markdown symbols such as **bold**, *, -, etc):\n\n\n\"{text}\"\n\n\nCONCISE SUMMARY:"
+              "combineMapPrompt": "=Write a concise summary of the following in Indonesian Language, in inline plain text only (no Markdown symbols such as **bold**, *, -, etc):\n\n\n{{ $json.data.data.article.main_content }}\n\n\nCONCISE SUMMARY: ",
+              "prompt": "Write a concise summary of the following in Indonesian Language, in inline plain text only (no Markdown symbols such as **bold**, *, -, etc):\n\n\n\"{text}\"\n\nCONCISE SUMMARY:"
             }
+          },
+          "batching": {
+            "batchSize": 5
           }
         }
       },
       "type": "@n8n/n8n-nodes-langchain.chainSummarization",
       "typeVersion": 2.1,
       "position": [
-        1072,
-        -224
+        928,
+        -320
       ],
       "id": "e0cb1535-25ae-401e-a84a-c9640022cd1e",
       "name": "Summarization Chain"
@@ -332,14 +319,14 @@
     {
       "parameters": {
         "content": "## RAG",
-        "height": 880,
-        "width": 1008,
+        "height": 768,
+        "width": 1296,
         "color": 7
       },
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        688,
-        192
+        608,
+        208
       ],
       "typeVersion": 1,
       "id": "d00a07aa-1730-4147-9020-9ef10691d52b",
@@ -348,14 +335,14 @@
     {
       "parameters": {
         "content": "## Scrapping",
-        "height": 384,
-        "width": 1296,
+        "height": 480,
+        "width": 1728,
         "color": 7
       },
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        -800,
-        -272
+        -1232,
+        -368
       ],
       "typeVersion": 1,
       "id": "5d703d73-f25d-42f5-b9b7-9d207986d96c",
@@ -364,8 +351,8 @@
     {
       "parameters": {
         "content": "## Summary",
-        "height": 512,
-        "width": 1104,
+        "height": 560,
+        "width": 1056,
         "color": 7
       },
       "type": "n8n-nodes-base.stickyNote",
@@ -384,8 +371,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
       "typeVersion": 1,
       "position": [
-        1200,
-        496
+        928,
+        592
       ],
       "id": "070428c2-b094-4101-ac9f-b3b4632de37c",
       "name": "DeepSeek Chat Model1",
@@ -395,6 +382,132 @@
           "name": "DeepSeek account"
         }
       }
+    },
+    {
+      "parameters": {
+        "content": "- Firecrawl API KEY",
+        "height": 80
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -992,
+        -224
+      ],
+      "id": "f7120558-38fd-4370-bc6f-e9c68ffa3b0d",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "- Resource Name: Your Azure AI Foundry resource name\n- Endpoint: YOUR_AZURE_OPENAI_ENDPOINT\n- API Key: YOUR_AZURE_OPENAI_KEY\n- API Version: API Version",
+        "height": 112,
+        "width": 416
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        512,
+        880
+      ],
+      "typeVersion": 1,
+      "id": "d536d0a0-8425-465f-baf5-76b4eb5434f4",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "- DeepSeek API KEY\n- Notion Integration Secret",
+        "height": 80
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1456,
+        -112
+      ],
+      "typeVersion": 1,
+      "id": "f5351451-7f05-4a04-81c0-e0af1a3004a7",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5b33bb56-98c6-4b98-94fa-f75efea16f31",
+              "name": "id",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -768,
+        -112
+      ],
+      "id": "090b3152-080e-422b-b7d4-b92f2347ebe6",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "mode": "chooseBranch",
+        "useDataOfInput": 2
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        288,
+        -128
+      ],
+      "id": "c8e2ffa6-de52-4b3f-a1d0-b740ba2730e0",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "dataType": "binary",
+        "binaryMode": "specificField",
+        "loader": "textLoader",
+        "textSplittingMode": "custom",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1,
+      "position": [
+        1072,
+        -144
+      ],
+      "id": "9463fb21-134d-4342-ae65-6181791f3431",
+      "name": "Default Data Loader1"
+    },
+    {
+      "parameters": {
+        "chunkSize": 2000,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        1072,
+        16
+      ],
+      "id": "33f25f5e-3168-49e4-acd6-75e04ae774f5",
+      "name": "Recursive Character Text Splitter"
+    },
+    {
+      "parameters": {
+        "operation": "toText",
+        "sourceProperty": "data.data.article.main_content",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        736,
+        -320
+      ],
+      "id": "bc79ce7f-7529-4827-b808-43219631ae01",
+      "name": "Convert to File"
     }
   ],
   "pinData": {},
@@ -484,24 +597,8 @@
       "ai_languageModel": [
         [
           {
-            "node": "AI Agent1",
-            "type": "ai_languageModel",
-            "index": 0
-          },
-          {
             "node": "Summarization Chain",
             "type": "ai_languageModel",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "AI Agent1": {
-      "main": [
-        [
-          {
-            "node": "Summarization Chain",
-            "type": "main",
             "index": 0
           }
         ]
@@ -511,7 +608,7 @@
       "main": [
         [
           {
-            "node": "Wait1",
+            "node": "Edit Fields",
             "type": "main",
             "index": 0
           }
@@ -533,19 +630,19 @@
       "main": [
         [
           {
-            "node": "AI Agent1",
+            "node": "Simple Vector Store",
             "type": "main",
             "index": 0
           },
           {
-            "node": "Simple Vector Store",
+            "node": "Convert to File",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "Wait1",
+            "node": "Merge1",
             "type": "main",
             "index": 0
           }
@@ -584,24 +681,77 @@
           }
         ]
       ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader1": {
+      "ai_document": [
+        [
+          {
+            "node": "Summarization Chain",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader1",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "Summarization Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": true,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "6d1b0803-e940-440e-8cdd-f86e15a53fe7",
+  "versionId": "7cb6394d-01a9-46a5-b5d9-04ec455b1a38",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "b5d19f1b6b094c7a1f6efc4a7017cacdbc67d8902f006e47e40be0b896a805e2"
   },
   "id": "heoK1XjUPeSIZnH6",
-  "tags": [
-    {
-      "createdAt": "2025-07-28T06:08:55.687Z",
-      "updatedAt": "2025-07-28T06:08:55.687Z",
-      "id": "ELe7VkkLUhxl0DSm",
-      "name": "mcp"
-    }
-  ]
+  "tags": []
 }

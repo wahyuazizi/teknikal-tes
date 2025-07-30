@@ -128,7 +128,7 @@ API Key: YOUR_FIRECRAWL_API_KEY
 lihat dokumentasi [disini](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion)
 ```
 Name: Notion account
-Token: YOUR_NOTION_TOKEN
+Notion Internal Integration Secret: Your Secret
 ```
 
 #### 4. Konfigurasi URL Target
@@ -180,4 +180,4 @@ Jika menggunakan Notion integration:
 - URL Target Limitations  
   - Workflow saat ini hard-coded untuk URL SimpliDOTS tertentu
   - Untuk test dengan URL lain, edit node "Extract Data"
-- 
+- Pastikan untuk memasukan Credential yang diperlukan dalam node pada workflow. Tertera juga pada catatan dalam workflow
